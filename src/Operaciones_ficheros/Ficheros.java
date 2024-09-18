@@ -10,6 +10,29 @@ public class Ficheros {
         f.setWritable(false);
         f.setExecutable(false);
     }
+
+    public static void listarFicheros(File f) {
+        File[] ficheros = d.listFiles();
+
+        for(File f:ficheros) {
+            if(f.isFile())
+                System.out.println(f.getName() + " es un fichero ");
+            if(f.isDirectory())
+                System.out.println(f.getName() + " es un directorio ");
+
+
+
+
+        }
+    public static void comprobarDirectorio(File f) {
+        if(f.isDirectory()) {
+            listarFicheros(f);
+        }else{
+                if(f.isFile())
+                    System.out.println("");
+            }
+        }
+    }
     public static void crearFichero(File f) {
 
     }
