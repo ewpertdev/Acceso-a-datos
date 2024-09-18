@@ -10,7 +10,9 @@ public class Ficheros {
         f.setWritable(false);
         f.setExecutable(false);
     }
+    public static void crearFichero(File f) {
 
+    }
     public static void verPermisos(File f) {
         String permisos = "";
 
@@ -48,6 +50,9 @@ public class Ficheros {
         if (!directorio.exists()) {
             // Crear directorio
             if (directorio.mkdirs()) {
+                // Llamó a la función para crear fichero
+                crearFichero(fichero);
+
 
                 try {
                     if (!fichero.exists()) {
@@ -60,6 +65,7 @@ public class Ficheros {
                     } else
                         System.out.println("Ya existe");
 
+                    // Llamo
                     //Llamo a la funcion verPermisos
                     verPermisos(fichero);
                     cambiarPermisos(fichero);
