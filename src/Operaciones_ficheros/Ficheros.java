@@ -11,7 +11,7 @@ public class Ficheros {
         f.setExecutable(false);
     }
 
-    public static void listarFicheros(File f) {
+    public static void listarFicheros(File d) {
         File[] ficheros = d.listFiles();
 
         for(File f:ficheros) {
