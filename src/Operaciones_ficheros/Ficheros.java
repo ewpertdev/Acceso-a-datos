@@ -11,19 +11,7 @@ public class Ficheros {
         f.setExecutable(false);
     }
 
-    public static void listarFicheros(File d) {
-        File[] ficheros = d.listFiles();
 
-        for(File f:ficheros) {
-            if(f.isFile())
-                System.out.println(f.getName() + " es un fichero ");
-            if(f.isDirectory())
-                System.out.println(f.getName() + " es un directorio ");
-
-
-
-
-        }
     public static void comprobarDirectorio(File f) {
         if(f.isDirectory()) {
             listarFicheros(f);
@@ -58,6 +46,17 @@ public class Ficheros {
 
         // Can also use f.getAbsolutePath() instead of f.getName()
         System.out.println("Los permisos del archivo " + f.getAbsolutePath() + " son " + permisos);
+
+    }
+
+public static void listarFicheros(File d) {
+    File[] ficheros = d.listFiles();
+
+    for(File f:ficheros) {
+        if(f.isFile())
+            System.out.println(f.getName() + " es un fichero ");
+        if(f.isDirectory())
+            System.out.println(f.getName() + " es un directorio ")
 
     }
 
