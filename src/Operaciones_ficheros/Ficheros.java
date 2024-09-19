@@ -1,7 +1,7 @@
 package Ficheros;
 import java.io.*;
 
-public class Principal {
+public class Ficheros {
     public static void cambiarPermisos(File f) {
         f.setExecutable(false);
         f.setReadable(false);
