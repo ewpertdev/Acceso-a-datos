@@ -1,4 +1,4 @@
-package Ficheros;
+package Operaciones_ficheros;
 import java.io.*;
 
 public class Ficheros {
