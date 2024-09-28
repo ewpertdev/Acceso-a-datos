@@ -21,6 +21,5 @@ public class Leer {
             System.out.println("No existe el archivo");
             e.printStackTrace();
         }
-
     }
 }
