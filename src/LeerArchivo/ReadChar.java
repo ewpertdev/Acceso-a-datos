@@ -18,13 +18,14 @@ public class ReadChar {
             System.out.println("LEYENDO CADA CARACTER...");
             int caracter;
 
+            // Seguir leyendo caracteres del archivo hasta que llegamos al final (indicado por -1)
             while((caracter = br.read())!=-1) {
-                char letra = (char) caracter; // CONVERTIR INT A CHAR CON CASTING
-                System.out.println(letra);
+                char letra = (char) caracter; // Convertir int (código ASCII) a char con type casting
+                System.out.println(letra); // Printear cada carácter sin espacio
 
             }
             br.close();
-            System.out.println(); // PRINTEAR UNA NUEVA LINEA DESPUES DE LEER
+            System.out.println(); // Printear una nueva línea después de leer
         } catch (IOException e) {
             e.printStackTrace();
         }
