@@ -8,6 +8,8 @@ import java.io.IOException;
 
 public class ReadChar {
     private final String rutaFichero = "hola.txt"; // ruta del archivo que queremos leer
+    private final int retrasoEnSegundos = 5;
+//    private final int printDelayInMillis = 500;
 
     public void readCharMethod() {
         try {
@@ -15,8 +17,11 @@ public class ReadChar {
             FileReader fr = new FileReader(fichero); // Preparar para leer el fichero
             BufferedReader br = new BufferedReader(fr); // Utilizamos BufferedReader para leer de forma eficiente
 
-            System.out.println("LEYENDO CADA CARÁCTER..."); // Printear un mensaje para indicar que la lectura empieza
-            Thread.sleep(5000);
+            System.out.println("LEYENDO CADA CARÁCTER...VOY A TARDAR " + retrasoEnSegundos + " SEGUNDO(S)..."); // Printear un mensaje para indicar que la lectura empieza
+            for (int i = retrasoEnSegundos; i > 0; i--) {
+                System.out.println("Esperando " + i + " segundo(s)..."); // Printear el tiempo que queda
+                Thread.sleep(1000); // Esperar 1 segundo
+            }
 
             int caracter; // Variable para almacenar el código ASCII de cada carácter
 
@@ -24,6 +29,7 @@ public class ReadChar {
             while ((caracter = br.read()) != -1) {
                 char letra = (char) caracter; // Convertir int (código ASCII) a char con type casting
                 System.out.println(letra); // Printear cada carácter sin espacio
+//                Thread.sleep(printDelayInMillis);
 
             }
             br.close(); // Cerrar el BufferedReader para liberar recursos
