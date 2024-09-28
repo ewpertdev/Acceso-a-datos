@@ -3,10 +3,10 @@ package LeerArchivo;
 import java.io.File;
 import java.util.Scanner;
 
-public class Leer {
+public class ReadEverything {
     private final String rutaFichero = "hola.txt";
 
-    public void leerCadaCaracter() {
+    public void leerTodo() {
         try {
             File fichero = new File(rutaFichero);
             Scanner teclado = new Scanner(fichero);

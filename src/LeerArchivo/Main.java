@@ -2,9 +2,12 @@ package LeerArchivo;
 
 public class Main {
     public static void main(String[] args) {
-        // creamos una instancia de la clase Leer e invocamos el metodo leerCadaCaracter
+        // CREAR INSTANCIA Y LUEGO INVOCAR EL METODO
 
-        Leer leerFichero = new Leer();
-        leerFichero.leerCadaCaracter();
+//        ReadEverything readEverythingFichero = new ReadEverything();
+//        readEverythingFichero.leerTodo();
+
+        ReadChar readCharFichero = new ReadChar();
+        readCharFichero.readCharMethod();
     }
 }
