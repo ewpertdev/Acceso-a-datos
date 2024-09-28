@@ -16,6 +16,8 @@ public class ReadChar {
             BufferedReader br = new BufferedReader(fr); // Utilizamos BufferedReader para leer de forma eficiente
 
             System.out.println("LEYENDO CADA CARÁCTER..."); // Printear un mensaje para indicar que la lectura empieza
+            Thread.sleep(5000);
+
             int caracter; // Variable para almacenar el código ASCII de cada carácter
 
             // Seguir leyendo caracteres del archivo hasta que llegamos al final (indicado por -1)
@@ -29,6 +31,8 @@ public class ReadChar {
         } catch (IOException e) {
             // Si hay un error mientras está leyendo el archivo, printeamos el stack trace para depurar
             e.printStackTrace();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
 
 
