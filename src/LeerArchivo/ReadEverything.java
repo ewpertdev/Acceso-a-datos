@@ -12,7 +12,7 @@ public class ReadEverything {
             Scanner teclado = new Scanner(fichero);
 
             System.out.println("Leyendo...:");
-            while(teclado.hasNext()) {
+            while (teclado.hasNext()) {
                 String palabra = teclado.next();
                 System.out.println(palabra);
             }

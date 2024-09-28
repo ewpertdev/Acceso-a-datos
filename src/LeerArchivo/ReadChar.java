@@ -19,7 +19,7 @@ public class ReadChar {
             int caracter;
 
             // Seguir leyendo caracteres del archivo hasta que llegamos al final (indicado por -1)
-            while((caracter = br.read())!=-1) {
+            while ((caracter = br.read()) != -1) {
                 char letra = (char) caracter; // Convertir int (código ASCII) a char con type casting
                 System.out.println(letra); // Printear cada carácter sin espacio
 
