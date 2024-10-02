@@ -1,4 +1,4 @@
-package PracticarBinario;
+package PracticarBinario.Coche;
 
 import java.io.*;
 

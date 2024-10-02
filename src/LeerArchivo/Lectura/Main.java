@@ -1,6 +1,6 @@
 package LeerArchivo.Lectura;
 
-import PracticarBinario.FicherosBinarios;
+import PracticarBinario.Coche.FicherosBinarios;
 
 public class Main {
     public static void main(String[] args) {
