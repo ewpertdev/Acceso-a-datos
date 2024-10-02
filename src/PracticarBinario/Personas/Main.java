@@ -53,6 +53,7 @@ public class Main {
                 // Usamos nextLine() porque el nombre puede tener espacios, por ejemplo: "Jose Luis"
                 String nombre = teclado.nextLine();
                 // Si el nombre es "salir", salir del bucle
+                // usamos equalsIgnoreCase() para que el programa no se quede colgado si el usuario introduce "Salir" o "SALIR" o "sAlIR" en vez de "salir"
                 if (nombre.equalsIgnoreCase("salir")) {
                     // El break es para que salgamos del bucle si el usuario introduce "salir"
                     break;
@@ -84,5 +85,12 @@ public class Main {
         // Despues hemos creado un metodo para escribir las personas en el fichero binario
         // Luego lo almacenamos en el fichero binario con el metodo escribirPersonas
         // Y por ultimo hemos creado un metodo para mostrar las personas almacenadas en el fichero binario
+        // Cada vez que ejecuto el programa me sale error y tengo que borrar personas.bin y volver a ejecutar el programa
+        
+         /* Would be nice if i had a way to automatically make personas1.bin, personas2.bin,etc
+         Sample method to automate file creation would probably be something like:
+         String ruta = "PracticarBinario/Personas/personas" + i + ".bin";
+         and then increment i each time the program is run by using i++ inside a loop
+         the loop we need is a while loop, and the loop will run until the user decides to stop it by typing "salir" */
     }
 }
