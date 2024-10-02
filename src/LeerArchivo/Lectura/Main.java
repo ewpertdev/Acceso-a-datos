@@ -1,5 +1,7 @@
 package LeerArchivo.Lectura;
 
+import PracticarBinario.FicherosBinarios;
+
 public class Main {
     public static void main(String[] args) {
         // Crear instancia de las clases (que necesitemos) para acceder a sus métodos
@@ -7,8 +9,11 @@ public class Main {
         // Llamar al método para leer caracteres del fichero
         // readCharFichero.readCharMethod();
 
-        CountVocales countVocalesFichero = new CountVocales();
-        countVocalesFichero.contarCaracteresYVocales();
+//        CountVocales countVocalesFichero = new CountVocales();
+//        countVocalesFichero.contarCaracteresYVocales();
+        String ruta = "fichero.bin";
+        FicherosBinarios.escribirBinario(ruta);
+        FicherosBinarios.leerBinario(ruta);
 
         // Otros métodos aquí
         // ReadEverything readEverythingFichero = new ReadEverything();
