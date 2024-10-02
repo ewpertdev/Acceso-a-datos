@@ -16,6 +16,10 @@ package PracticarBinario.Personas;
  * 6. EOFException: Es una excepcion que se lanza cuando se llega al final del fichero, lo dice su propio nombre (End Of File)
  * 7. IOException: Es una excepcion que se lanza cuando hay un error de entrada/salida, lo dice su propio nombre (input/output)
  * 8. ClassNotFoundException: Es una excepcion que se lanza cuando no se encuentra la clase a la que se intenta acceder, lo dice su propio nombre (Class)
+ * 9. LEER en un fichero binario: Para leer en un fichero binario, usamos un ObjectInputStream para leer los objetos del fichero binario con el metodo readObject()
+ * 10. LEER en un fichero de texto: Para leer en un fichero de texto, usamos un BufferedReader o un Scanner para leer el fichero de texto con el metodo readLine() o nextLine()
+ * 11.ESCRIBIR en un fichero binario: Para escribir en un fichero binario, usamos un ObjectOutputStream para escribir los objetos en el fichero binario con el metodo writeObject()
+ * 12.ESCRIBIR en un fichero de texto: Para escribir en un fichero de texto, usamos un BufferedWriter o un PrintWriter para escribir el fichero de texto con el metodo write() o println()
  */
 
 /* Paso por paso:

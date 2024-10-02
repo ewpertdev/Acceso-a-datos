@@ -54,19 +54,19 @@ public class Persona implements Serializable {
 
     // Metodo para escribir las personas en el fichero binario
     public void escribirPersonas(String ruta) {
-        // El try con recursos es para que el ObjectOutputStream se cierre automaticamente
-        // Recursos se refiere a los recursos del sistema como los ficheros
+        // El try con recursos (try con recursos se refiere a que el try se encarga de cerrar los recursos, siendo los recursos los objetos que se abren en el try) 
+        // es para que el ObjectOutputStream se cierre automaticamente
         // ObjectOutputStream es una clase que permite escribir objetos en un fichero binario
         // new FileOutputStream(ruta, true) es para que el fichero se añada y no se sobrescriba
         // El true es para que el fichero se añada y no se sobrescriba
-
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(ruta, true))) {
             // El oos.writeObject(this) es un metodo de la clase ObjectOutputStream que escribe un objeto en el fichero binario
             // this se refiere a la instancia actual de la clase Persona
             // Para explicarlo de una manera mas sencilla, this es una referencia a la instancia actual de la clase
             // Y como this es una instancia de la clase Persona, se puede escribir en el fichero binario
             // Entonces lo que hemos hecho es escribir en el fichero binario la instancia actual de la clase Persona 
-            // Gracias al metodo writeObject
+            // Gracias al metodo writeObject() de la clase ObjectOutputStream
+            // Y como this es una instancia de la clase Persona, se puede escribir en el fichero binario
             oos.writeObject(this);
         } catch (IOException e) {
             System.out.println("Error al escribir en el fichero");

@@ -9,9 +9,8 @@ public class Main {
         FicherosBinarios.escribirBinario(ruta);
         FicherosBinarios.leerBinario(ruta);
 
-        // Escribir y leer objetos coche
-        Coche coche = new Coche();
-        coche.escribirCoches(ruta2);
-        Coche.leerObjeto(ruta2);
+        // Llamamos directamente d
+        Coche.escribirCoches(ruta2);
+        Coche.leerCoche(ruta2);
     }
 }
