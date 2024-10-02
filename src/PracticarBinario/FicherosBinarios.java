@@ -24,9 +24,11 @@ public class FicherosBinarios {
             while((i=fis.read())!=-1){
                 System.out.println((char)i);
             }
+            fis.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
 }

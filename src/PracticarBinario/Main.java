@@ -3,16 +3,15 @@ package PracticarBinario;
 public class Main {
     public static void main(String[] args) {
         String ruta = "fichero.bin";
-        String ruta 2 = "ficheroObjectos.bin";
-        // Crear instancia de las clases (que necesitemos) para acceder a sus métodos
-        FicherosBinarios fb = new FicherosBinarios();
-        // Llamar al método para leer caracteres del fichero
-        fb.escribirBinario(ruta);
+        String ruta2 = "ficheroObjectos.bin";
+        
+        // Escribir y leer datos binarios
+        FicherosBinarios.escribirBinario(ruta);
+        FicherosBinarios.leerBinario(ruta);
 
-
-        FicherosBinarios ffb = new FicherosBinarios();
-        ffb.leerBinario(ruta);
-        FicherosBinarios lo = new FicherosBinarios();
-
+        // Escribir y leer objetos coche
+        Coche coche = new Coche();
+        coche.escribirCoches(ruta2);
+        Coche.leerObjeto(ruta2);
     }
 }

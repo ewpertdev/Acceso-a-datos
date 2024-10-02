@@ -5,31 +5,28 @@ package Personas;
 //crear una función que permita mostrar todas las personas que están
 //almacenadas.
 
-// Crear fichero Binario
-// Guardar varias instancias de la Persona = File WRITE
+/* Paso por paso:
+ * 1. Crear fichero binario llamado personas.bin
+ * 2. Pedir datos de la persona (nombre y edad)
+ * 3. Guardar varias instancias de la Persona en el fichero binario
+ * 4. Mostrar las personas almacenadas en el fichero binario
+ */
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.util.Scanner;
 
 public class Main {
-    public static void escribirBinario(String ruta) {
-        File fichero = new File(ruta);
-        try {
-            FileOutputStream fos = new FileOutputStream(fichero);
-            String datos = "Vamos a escribir una prueba de datos";
-            // Convertimos de char a bytes
-            fos.write(datos.getBytes());
-            // Siempre hay que cerrarlo después de la operación
-            fos.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
     public static void main(String[] args) {
-        String ruta = "fichero.bin";
-
+        // Crear nuevo fichero binario llamado personas.bin
+        String ruta = "personas.bin";
         Scanner teclado = new Scanner(System.in);
-        escribirBinario(String ruta);
+        System.out.println("Introduce el nombre de la persona: ");
+        String nombre = teclado.nextLine();
+        System.out.println("Introduce la edad de la persona: ");
+        int edad = teclado.nextInt();
+        teclado.close();
+        // Guardar varias instancias de la Persona en el fichero binario "personas.bin"
+        Persona persona = new Persona(nombre, edad);
+        persona.escribirPersonas(ruta);
+        persona.mostrarPersonas(ruta);
     }
 }

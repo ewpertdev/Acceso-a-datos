@@ -81,6 +81,7 @@ public class Coche implements Serializable {
 
             oos.writeObject(c1);
             oos.writeObject(c2);
+            oos.close();
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -90,29 +91,22 @@ public class Coche implements Serializable {
 
     }
     public static void leerObjeto(String ruta) {
-
-        try {
-            ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ruta));
-
-            // Convertir con type casting
-//            Coche coche1 = (Coche) ois.readObject();
-//            Coche coche2=(Coche) ois.readObject();
-            Coche coche1;
-
-            while((Coche coche1=(Coche)ois.readObject())!=null) {
-                System.out.println(coche1);
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ruta))) {
+            Coche coche;
+            while ((coche = (Coche) ois.readObject()) != null) {
+                System.out.println(coche);
             }
-            ois.close();
-
-            System.out.printf("%d %s %s %d %d%n", coche1.getNumPuertas(), coche1.getMarca(), coche1.getModelo(), coche1.getNumeroCaballos(), coche1.getCilindrada());
-
-        } catch (ClassNotFoundException e) {
+        } catch (EOFException e) {
+            // End of file reached, do nothing
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
+    }
 
+    @Override
+    public String toString() {
+        return String.format("Coche{numPuertas=%d, marca='%s', modelo='%s', numeroCaballos=%d, cilindrada=%d, precio=%.2f}",
+                numPuertas, marca, modelo, numeroCaballos, cilindrada, precio);
     }
 }
 
