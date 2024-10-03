@@ -12,6 +12,7 @@ public class Main {
             ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(ruta)));
             oos.writeObject(p);
             System.out.println("Las personas han sido guardadas");
+            oos.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -23,6 +24,7 @@ public class Main {
         try {
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File(ruta)));
             personas = (List <Persona>)ois.readObject();
+            ois.close();
         } catch (IOException | ClassNotFoundException e) {
             e.getMessage();
             e.printStackTrace();
@@ -52,8 +54,14 @@ public class Main {
 
             System.out.println("Continue? (0 para salir, cualquier otro número para seguir");
             opcion=sc.nextInt();
+
         }
+        sc.close();
         // Haremos la llamada a escribir el array en el fichero
         escribirPersonas(personas, ruta);
+        List <Persona> personasLeidas = leerPersonas(ruta);
+        for(Persona p:personasLeidas) {
+
+        }
     }
 }
