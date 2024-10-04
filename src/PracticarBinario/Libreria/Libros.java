@@ -58,10 +58,8 @@ public class Libros implements Collection<Libros> {
                 "titulo='" + titulo + '\'' +
                 ", autor='" + autor + '\'' +
                 ", precio=" + precio +
-                ", sc=" + sc +
                 '}';
     }
-
 
     @Override
     public int size() {
@@ -130,7 +128,13 @@ public class Libros implements Collection<Libros> {
     public static void main(String[] args) {
         List<Libros> libros = new ArrayList<>();
         // Insertar libros
+        libros.add(new Libros("El señor de los anillos", "J.R.R. Tolkien", 100.0));
+        libros.add(new Libros("Harry Potter y la piedra filosofal", "J.K. Rowling", 150.0));
+        libros.add(new Libros("1984", "George Orwell", 200.0));
         // Listar libros
+        for (Libros libro : libros) {
+            System.out.println(libro);
+        }
         // Ordenar libros (filtrado por precio, incr, decr)
         // Filtro rango de precios
 
