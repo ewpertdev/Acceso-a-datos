@@ -1,5 +1,8 @@
 package MenuAlumnos;
 
+// Se quiere guardar los datos de los alumnos con los atributos nombre, apelido y nota. 
+// Se debe crear una clase que se lame alumnos y que permita dar de alta alumnos, insertar notas y filtrar quienes han suspendido y quienes han aprobado.
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
