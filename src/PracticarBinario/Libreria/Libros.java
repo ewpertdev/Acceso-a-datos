@@ -54,11 +54,7 @@ public class Libros implements Collection<Libros> {
 
     @Override
     public String toString() {
-        return "Libros{" +
-                "titulo='" + titulo + '\'' +
-                ", autor='" + autor + '\'' +
-                ", precio=" + precio +
-                '}';
+        return STR."Libros{titulo='\{titulo}', autor='\{autor}', precio=\{precio}}";
     }
 
     @Override
