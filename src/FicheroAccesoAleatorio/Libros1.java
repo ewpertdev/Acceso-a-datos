@@ -3,7 +3,6 @@ package FicheroAccesoAleatorio;
 import java.io.*;
 
 // Fichero Acceso Aleatorio
-
 public class Libros1 {
     public static void EscrituraFicheroAleatorio(String fichero, String cadena, RandomAccessFile raf){
         try {
