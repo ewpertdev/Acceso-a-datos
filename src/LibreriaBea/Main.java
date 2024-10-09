@@ -18,18 +18,28 @@ public class Main {
     
 
     private static LibreriaBea leerFichero(){
-        LibreriaBea libroBea = new LibreriaBea();
-        try {
+        LibreriaBea libroBea= null;
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File))){
+
+        libroBea=(LibreriaBea)ois.readObject();
             
-        } catch (IOException e) {
+        } catch (ClassNotFoundException e) {
+            System.out.println("No hemos podido recuperar el objecto");
             e.printStackTrace();
             
+        } catch(IOException e) {
+            System.out.println("Error en la lectura");
+            e.printStackTrace();
+
         }
         return libroBea; 
 
     }
 
     public static void main(String[] args) {
+        // Crear libreria
+        LibreriaBea libreria = new LibreriaBea();
+        libreria.insertarLibros("Harry Potter", "JK Rowling", 12)
 
     }
 
