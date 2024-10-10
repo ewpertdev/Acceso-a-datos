@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class  nLibro {
+public class Libro {
     // Atributos de la clase Libro
     // private es para que no se pueda acceder a los atributos desde fuera de la clase, esto es para encapsular, es importante para la seguridad del codigo
     private String titulo;
@@ -199,7 +199,7 @@ public class  nLibro {
             // Creamos un objeto Libro con los datos introducidos por el usuario y lo agregamos a la libreria
             Libro libro = new Libro();
             libro.setTitulo(titulo);
-            libro.setAutor(autor);
+            libro.setAutor(autor);   
             libro.setPrecio(precio);
             libreria.insertarLibro(libro);
 
