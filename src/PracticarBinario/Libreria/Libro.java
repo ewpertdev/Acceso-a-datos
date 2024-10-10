@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Libro {
+public class  nLibro {
     // Atributos de la clase Libro
     // private es para que no se pueda acceder a los atributos desde fuera de la clase, esto es para encapsular, es importante para la seguridad del codigo
     private String titulo;

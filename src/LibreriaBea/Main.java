@@ -44,3 +44,5 @@ public class Main {
     }
 
 }
+//  aux.listarLibros();
+//  List<Libro> = p.auxfiltrarLibrosPorPrecio(17.00, 17.00);
